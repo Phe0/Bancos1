@@ -1,5 +1,6 @@
 from owner import Owner
 from vehicle import Vehicle
+import os
 
 name = input('Insira seu nome completo: ')
 identity = input('Insira seu numero da identidade: ')
@@ -18,5 +19,3 @@ for i in range(0, qtd):
     vehicle = Vehicle(plate, model, color)
 
     owner.addVehicle(vehicle)
-
-owner.createFile()
