@@ -38,7 +38,7 @@ int buscarCarro(struct Pessoa *lista, int n, char *placa) {
 
 void recuperar(struct Pessoa *lista, int n) {
   char placa[100];
-  printf("Digite a Placa:");
+  printf("Digite a Placa: ");
   scanf("%s",&placa);
   int i = buscarCarro(lista, n, placa);
   if(i >= 0) {
@@ -55,11 +55,11 @@ void recuperar(struct Pessoa *lista, int n) {
 
 void inserir(struct Pessoa *lista, int n) {
   char placa[100];
-  printf("Digite a Placa:");
+  printf("Digite a Placa: ");
   scanf("%s",&placa);
   int i = buscarCarro(lista, n, placa);
   if(i >= 0) {
-    printf("Veículo já registrado");
+    printf("Veículo já registrado\n");
   }
   else {
       memcpy(lista[n].placa, placa, 100);
@@ -67,7 +67,7 @@ void inserir(struct Pessoa *lista, int n) {
       scanf(" %[^\n]",lista[n].nome);
       printf("Digite o cpf: ");
       scanf("%d",&lista[n].cpf);
-      printf("Digite o Modelo do carro:");
+      printf("Digite o Modelo do carro: ");
       scanf(" %[^\n]",lista[n].modelo);
       sortCars(lista, n);
   }
@@ -76,7 +76,7 @@ void inserir(struct Pessoa *lista, int n) {
 void alterar(struct Pessoa *lista, int n) {
   char placa[100];
   int j;
-  printf("Digite a Placa:");
+  printf("Digite a Placa: ");
   scanf("%s",&placa);
   int i = buscarCarro(lista, n, placa);
   if(i >= 0) {
@@ -84,7 +84,7 @@ void alterar(struct Pessoa *lista, int n) {
     scanf(" %[^\n]",lista[i].nome);
     printf("Digite o novo cpf do proprietário: ");
     scanf("%d",&lista[i].cpf);
-    printf("Digite o novo Modelo do carro:");
+    printf("Digite o novo Modelo do carro: ");
     scanf(" %[^\n]",lista[i].modelo);
   }
 }
