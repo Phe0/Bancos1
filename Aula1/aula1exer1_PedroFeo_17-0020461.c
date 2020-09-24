@@ -31,12 +31,10 @@ int main() {
             case 1:
                 printf("\nPlaca do Veículo:\n");
                 scanf("", &plate);
-                buscarVeiculo(plate);
             break;
             case 2:
                 prinf("\nCPF da pessoa:\n");
                 scanf("", &cpf);
-                buscarPessoa(cpf);
             break;
             case 3:
                 printf("\nAdicionar Novo Veículo:\n");
@@ -46,7 +44,6 @@ int main() {
                 scanf("", &plate);
                 printf("\nModelo do Veículo:\n");
                 scanf("", &model);
-                inserirVeiculo(cpf, plate, model);
             break;
             case 4:
                 printf("\nAdicionar Nova Pessoa:\n");
@@ -54,7 +51,6 @@ int main() {
                 scanf("", &name);
                 printf("\nCPF da Pessoa:\n");
                 scanf("", &cpf);
-                inserirPessoa(name, cpf);
             break;
             default:
             break;
